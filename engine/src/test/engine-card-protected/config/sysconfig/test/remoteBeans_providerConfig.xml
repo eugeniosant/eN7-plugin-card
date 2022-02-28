@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<providerConfig>
+    <component active="true" code="entando7-ms-engine">
+        <bean active="false" class="org.entando.entando.aps.system.services.storage.IStorageManager" requireAuth="false" strategy="LOCAL_FIRST"/>
+        <bean active="false" class="com.agiletec.aps.system.services.baseconfig.ConfigInterface" requireAuth="false" strategy="LOCAL_FIRST"/>
+    </component>
+    <component active="true" code="entando7-plugin-card-lib">
+        <bean active="true" class="org.entando.entando.portalexample.aps.system.services.card.ICardManager" requireAuth="false" strategy="LOCAL_FIRST"/>
+    </component>
+</providerConfig>

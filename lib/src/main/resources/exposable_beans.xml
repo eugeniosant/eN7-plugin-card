@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<exposableBeans component="entando7-plugin-card-lib">
+    <bean id="CardManager">org.entando.entando.portalexample.aps.system.services.card.ICardManager</bean>
+</exposableBeans>

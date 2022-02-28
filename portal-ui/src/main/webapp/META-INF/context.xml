@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Context path="/portalexample" docBase="./portalexample" debug="1" reloadable="false">
+
+    <Environment name="logActiveFileOutput" value="true" type="java.lang.String" override="false" />
+    <Environment name="logName" value="/projects/N/portalexamplen/target/portalexample.log" type="java.lang.String" override="false" />
+    <Environment name="logFileRotatePattern" value="/projects/N/portalexamplen/target/portalexample_logs/portalexample-%i.log.gz" type="java.lang.String" override="false" />
+    <Environment name="logLevel" value="INFO" type="java.lang.String" override="false" />
+    <Environment name="logFileSize" value="10485760" type="java.lang.String" override="false" />
+    <Environment name="logFilesCount" value="10" type="java.lang.String" override="false" />
+
+    <Environment name="configVersion" value="production" type="java.lang.String" override="false" />
+
+    <Environment name="applicationBaseURL" value="https://localhost:8080/portalexample/" type="java.lang.String" override="false" />
+    <Environment name="resourceRootURL" value="/portalexample/resources/" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceRootURL" value="/portalexample/protected/" type="java.lang.String" override="false" />
+
+    <Environment name="resourceDiskRootFolder" value="/projects/N/portalexamplen/src/main/webapp/resources" type="java.lang.String" override="false" />
+    <Environment name="protectedResourceDiskRootFolder" value="/projects/N/portalexamplen/src/main/webapp/protected" type="java.lang.String" override="false" />
+
+    <Environment name="indexDiskRootFolder" value="/projects/N/portalexamplen/target/temp/indexdir" type="java.lang.String" override="false" />
+    
+    <Environment name="portDataSourceClassName" value="org.postgresql.Driver" type="java.lang.String" override="false" />
+    <Environment name="servDataSourceClassName" value="org.postgresql.Driver" type="java.lang.String" override="false" />
+	
+    <Resource name="jdbc/portDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:postgresql://localhost:5432/portalexamplePort" />
+
+    <Resource name="jdbc/servDataSource" auth="Container"
+              type="javax.sql.DataSource" driverClassName="org.postgresql.Driver"
+              maxActive="8" maxIdle="4"
+              username="agile" password="agile"
+              url="jdbc:postgresql://localhost:5432/portalexampleServ" />
+
+</Context>

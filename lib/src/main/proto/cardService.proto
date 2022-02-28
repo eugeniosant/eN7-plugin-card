@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.entando.ent.card.grpc";
+option java_outer_classname = "CardProto";
+option objc_class_prefix = "HLW";
+
+import "model/commons.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
+package grpc;
+
+service CardService {
+    rpc getCard (google.protobuf.UInt32Value) returns (GrpcCard) {}
+    rpc searchCardIds (GrpcFieldSearchFilterList) returns (GrpcCardIdList) {}
+    rpc addCard (GrpcCard) returns (google.protobuf.Empty) {}
+    rpc updateCard (GrpcCard) returns (google.protobuf.Empty) {}
+    rpc deleteCard (google.protobuf.UInt32Value) returns (google.protobuf.Empty) {}
+    rpc getCards (google.protobuf.Empty) returns (GrpcCardList) {}
+    rpc searchCards (google.protobuf.StringValue) returns (GrpcCardList) {}
+}
+
+message GrpcCard {
+    google.protobuf.UInt32Value id = 1;
+    google.protobuf.StringValue holder = 2;
+    google.protobuf.StringValue description = 3;
+    google.protobuf.StringValue date = 4;
+    google.protobuf.StringValue note = 5;
+}
+
+message GrpcCardIdList {
+    repeated google.protobuf.UInt32Value ids = 1;
+}
+
+message GrpcCardList {
+    repeated GrpcCard cards = 1;
+}
